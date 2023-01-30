@@ -1,0 +1,84 @@
+<div class="container ">
+  <div class="py-5 text-center">
+    <h2>Zadania</h2>
+    <hr>
+  </div>
+
+  <div class="g-5 d-flex justify-content-center">
+    <div class="col-md-7">
+      <h4 class="mb-3">Edytuj Zadanie</h4>
+      <form class="needs-validation" novalidate>
+        <div class="row g-3">
+          <div class="col-sm-12">
+            <label for="name" class="form-label">Nazwa</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="name" required>
+            <div class="invalid-feedback">
+              Podano nieprawidłową nazwę
+            </div>
+          </div>
+
+          <div class="col-6">
+            <label for="startDate" class="form-label">Początek</label>
+            <div class="input-group has-validation">
+              <input type="datetime-local" class="form-control" id="startDate" [(ngModel)]="startDate" required>
+            <div class="invalid-feedback">
+                Podano nieprawidłową datę początkową
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <label for="endDate" class="form-label">Koniec</label>
+            <div class="input-group has-validation">
+              <input type="datetime-local" class="form-control" id="endDate" [(ngModel)]="endDate" required>
+            <div class="invalid-feedback">
+                Podano nieprawidłową datę końcową
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <label for="age" class="form-label">Wymagani wolontariusze</label>
+            <input type="number" class="form-control" min="1" id="age" placeholder="1" [(ngModel)]="age" required>
+            <div class="invalid-feedback">
+              Podano nieprawidłową ilość wymaganych wolontariuszy
+            </div>
+          </div>
+
+          <hr>
+
+          <div cdkDropListGroup>
+            <div class="example-container col-sm-6">
+              <h4 class="text-center">Wszyscy Wolontariusze</h4>
+
+              <cdk-virtual-scroll-viewport class="example-list" cdkDropList [cdkDropListData]="wszyscy" style="height: 300px" itemSize="90" (cdkDropListDropped)="drop($event)">
+                <ng-container *ngFor="let wolo of wszyscy">
+                  <div class="example-box" cdkDrag>{{wolo}}</div>
+                </ng-container>
+              </cdk-virtual-scroll-viewport>
+
+            </div>
+            <div class="example-container col-sm-6">
+              <h4 class="text-center">Przypisani Wolontariusze</h4>
+
+              <cdk-virtual-scroll-viewport class="example-list" cdkDropList [cdkDropListData]="przypisani" style="height: 300px" itemSize="90" (cdkDropListDropped)="drop($event)">
+                <ng-container *ngFor="let wolo of przypisani">
+                  <div class="example-box" cdkDrag>{{wolo}}</div>
+                </ng-container>
+              </cdk-virtual-scroll-viewport>
+
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4">
+        <div class="row">
+          <button class="btn col btn-danger btn-lg" [routerLink]="['/event']" type="submit">Usuń</button>
+          <div class="col-5"></div>
+          <button class="btn col btn-primary btn-lg" [routerLink]="['/event']" type="submit">Zapisz</button>
+          <button class="btn col btn-secondary btn-lg" [routerLink]="['/event']" type="submit">Cofnij</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

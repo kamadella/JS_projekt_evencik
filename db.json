@@ -1,0 +1,147 @@
+{
+  "events": [
+    {
+      "nazwa": "wystawa piesków",
+      "czasPoczatek": "2023-01-26T14:51",
+      "czasKoniec": "2023-01-27T14:51",
+      "id": 1
+    },
+    {
+      "nazwa": "wystawa kotków",
+      "czasPoczatek": "2023-01-21T14:51",
+      "czasKoniec": "2023-01-22T14:51",
+      "id": 2
+    },
+    {
+      "nazwa": "konkurs we Wrocku",
+      "czasPoczatek": "2023-01-23T15:02",
+      "czasKoniec": "2023-01-25T15:02",
+      "id": 3
+    }
+  ],
+  "zadania": [
+    {
+      "id": 8,
+      "nazwa": "rozstawić krzeselka",
+      "czasPoczatek": "2023-01-23T14:03:00.000Z",
+      "czasKoniec": "2023-01-23T15:03:00.000Z",
+      "wolontariuszeWymagani": 6,
+      "eventId": "2",
+      "przydzieleniId": [
+        3,
+        6,
+        8,
+        4,
+        7
+      ]
+    },
+    {
+      "id": 10,
+      "nazwa": "umyc kotka",
+      "czasPoczatek": "2023-01-21T14:53:00.000Z",
+      "czasKoniec": "2023-01-22T14:53:00.000Z",
+      "wolontariuszeWymagani": 4,
+      "eventId": "1",
+      "przydzieleniId": [
+        6,
+        5,
+        4,
+        7
+      ]
+    },
+    {
+      "id": 11,
+      "nazwa": "uczesac kotka",
+      "czasPoczatek": "2023-01-28T14:53:00.000Z",
+      "czasKoniec": "2023-01-29T14:53:00.000Z",
+      "wolontariuszeWymagani": 3,
+      "eventId": "1",
+      "przydzieleniId": [
+        4
+      ]
+    },
+    {
+      "id": 12,
+      "nazwa": "pozamiatać",
+      "czasPoczatek": "2023-01-28T14:55:00.000Z",
+      "czasKoniec": "2023-01-29T14:55:00.000Z",
+      "wolontariuszeWymagani": 1,
+      "eventId": "2",
+      "przydzieleniId": [
+        7
+      ]
+    }
+  ],
+  "wolontariusze": [
+    {
+      "imie": "Jan",
+      "nazwisko": "Norman",
+      "telefon": 666999777,
+      "wiek": 18,
+      "id": 1
+    },
+    {
+      "imie": "Stephen",
+      "nazwisko": "Kowaluk",
+      "telefon": 666999777,
+      "wiek": 18,
+      "id": 2
+    },
+    {
+      "imie": "Eryk",
+      "nazwisko": "Drenosz",
+      "telefon": 666999777,
+      "wiek": 18,
+      "id": 3
+    },
+    {
+      "imie": "Wiktoria",
+      "nazwisko": "Norman",
+      "telefon": 666999777,
+      "wiek": 18,
+      "id": 4
+    },
+    {
+      "imie": "Kacper",
+      "nazwisko": "Konratowski",
+      "telefon": 797979797,
+      "wiek": 19,
+      "id": 5
+    },
+    {
+      "imie": "Paweł",
+      "nazwisko": "Alpin",
+      "telefon": 771144556,
+      "wiek": 17,
+      "id": 6
+    },
+    {
+      "imie": "Piotr",
+      "nazwisko": "Bochan",
+      "telefon": 333333333,
+      "wiek": 12,
+      "id": 7
+    },
+    {
+      "imie": "Miłosz",
+      "nazwisko": "Adamski",
+      "telefon": 999999999,
+      "wiek": 14,
+      "id": 8
+    },
+    {
+      "imie": "Marcin",
+      "nazwisko": "Bochan",
+      "telefon": 555555554,
+      "wiek": 21,
+      "id": 9
+    },
+    {
+      "imie": "bartek",
+      "nazwisko": "chmielewski",
+      "telefon": 123456789,
+      "wiek": 14,
+      "id": 10
+    }
+  ]
+}

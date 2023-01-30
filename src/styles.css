@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "tahoma";
+    src: local("tahoma"), url(./assets/tahoma.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "bubble";
+    src: local("bubble"), url(./assets/BubbleMint.otf) format("truetype");
+}

@@ -1,0 +1,29 @@
+﻿<td class="index">
+  {{id+1}}
+</td>
+<td class="name">
+    {{zadanie.nazwa}}
+</td>
+<td class="date">
+  <b>Start:</b>
+      {{zadanie.czasPoczatek | plDate}}
+    <b>End:</b>
+      {{zadanie.czasKoniec | plDate}}
+  </td>
+<td class="volu">
+    {{zadanie.przydzieleniId.length}}
+  /
+    {{zadanie.wolontariuszeWymagani}}
+</td>
+<td class="state">
+  <b style="Color: green; vertical-align: middle;font-size: 25px;" *ngIf="zadanie.przydzieleniId.length >= zadanie.wolontariuszeWymagani">
+    ✓
+  </b>
+  <b style="Color: red;vertical-align: middle;font-size: 25px;" *ngIf="zadanie.przydzieleniId.length < zadanie.wolontariuszeWymagani">
+    X
+  </b>
+</td>
+<td class="control">
+  <button class="button"  [routerLink]="['/zadanie/edit', zadanie.id]">Edytuj</button>
+  <button class="button" (click)="onDelete()">Usuń</button>
+</td>

@@ -1,0 +1,36 @@
+<body>
+  <div style="margin: 2%;">
+    <div class="container" style="margin: 0px;padding:0px; max-width: 2500px;">
+      <div class="row">
+        <div class="col-md">
+          <div style="text-align: left;margin-top: 50px;margin-right: 0px;padding-left: 25px;"><h3 color="pink" appMyDirective>Lista Zadań</h3></div>
+        </div>
+        <div class="col-md">
+          <div style="text-align: right;margin-top: 50px"><button class="button" [routerLink]="['/zadanie/create/'+[eventId]]">Dodaj Zadanie</button></div>
+        </div>
+      </div>
+    </div>
+
+
+<div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Data</th>
+      <th scope="col">Wolontariusze</th>
+      <th scope="col">Dość<br/>wolontariuszy</th>
+      <th scope="col">Zarządzanie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container>
+      <tr app-zadanie *ngFor="let zadanie of zadania; index as id" [zadanie]="zadanie" [id]="id"></tr>
+    </ng-container>
+  </tbody>
+  </table>
+
+</div>
+</div>
+</body>

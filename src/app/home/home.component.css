@@ -1,0 +1,33 @@
+#title{
+    text-align: center;
+    margin-top: 50px;
+  }
+  table{
+    background-color: #ffdbe2;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  th{
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color:  #d55394;
+    color: white;
+    font-family: "tahoma";
+    font-weight: 500;
+    padding: 5px;
+  }
+
+  .button {
+    background-color: #d56894; /* Green */
+    width: 200px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+

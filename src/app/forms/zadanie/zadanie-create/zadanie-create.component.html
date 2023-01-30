@@ -1,0 +1,87 @@
+<div class="container ">
+  <div class="py-5 text-center">
+    <h2>Zadania</h2>
+    <hr>
+  </div>
+
+  <div class="g-5 d-flex justify-content-center">
+    <div class="col-md-7">
+      <h4 class="mb-3">Kreator Zadań</h4>
+      <form [formGroup]="formModel" (ngSubmit)='addZadanie()' class="needs-validation" novalidate>
+        <div class="row g-3">
+          <div class="col-sm-12">
+            <label for="name" class="form-label">Nazwa</label>
+            <input type="text" formControlName="name" class="form-control" id="name" placeholder="zadanie-1" value="" required>
+            <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="invalid-feedback">
+              Podano nieprawidłową nazwę
+            </div>
+          </div>
+
+          <div class="col-6">
+            <label for="startDate" class="form-label">Początek</label>
+            <div class="input-group has-validation">
+              <input type="datetime-local" formControlName="startDate" class="form-control" id="startDate" required>
+            <div *ngIf="startDate?.invalid && (startDate?.dirty || startDate?.touched)" class="invalid-feedback">
+                Podano nieprawidłową datę początkową
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <label for="endDate" class="form-label">Koniec</label>
+            <div class="input-group has-validation">
+              <input type="datetime-local" formControlName="endDate" class="form-control" id="endDate" required>
+              <div *ngIf="(endDate?.dirty || endDate?.touched)">
+                <div *ngIf="endDate?.invalid" class="invalid-feedback">
+                  Podano nieprawidłową datę końcową
+                </div>
+                <div *ngIf="endDate?.value<startDate?.value" class="invalid-feedback">
+                  Data końcowa powinna być większa od początkowej 😉
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <label for="amount" class="form-label">Wymagani wolontariusze</label>
+            <input type="number" class="form-control" formControlName="amount" min="1" id="amount" placeholder="1" required>
+            <div *ngIf="amount?.invalid && (amount?.dirty || amount?.touched)" class="invalid-feedback">
+              Podano nieprawidłową ilość wymaganych wolontariuszy
+            </div>
+          </div>
+
+          <hr>
+
+          <div cdkDropListGroup>
+            <div class="example-container col-sm-6">
+              <h4 class="text-center">Wszyscy Wolontariusze</h4>
+
+              <cdk-virtual-scroll-viewport class="example-list" cdkDropList [cdkDropListData]="wszyscy" style="height: 300px" itemSize="90" (cdkDropListDropped)="drop($event)">
+                <ng-container *ngFor="let wolo of wszyscy">
+                  <div class="example-box" cdkDrag>{{wolo}}</div>
+                </ng-container>
+              </cdk-virtual-scroll-viewport>
+
+            </div>
+            <div class="example-container col-sm-6">
+              <h4 class="text-center">Przypisani Wolontariusze</h4>
+
+              <cdk-virtual-scroll-viewport class="example-list" cdkDropList [cdkDropListData]="przypisani" style="height: 300px" itemSize="90" (cdkDropListDropped)="drop($event)">
+                <ng-container *ngFor="let wolo of przypisani">
+                  <div class="example-box" cdkDrag>{{wolo}}</div>
+                </ng-container>
+              </cdk-virtual-scroll-viewport>
+
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4">
+        <div class="row">
+          <button class="btn col btn-success btn-lg"  type="submit">Zapisz</button>
+          <button class="btn col btn-secondary btn-lg" [routerLink]="['/event/list/'+[eventId]]" type="submit">Cofnij</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

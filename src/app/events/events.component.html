@@ -1,0 +1,17 @@
+<td class="index">
+  {{id+1}}
+</td>
+<td class="name">
+    {{event.nazwa}}
+</td>
+<td class="date">
+  <b>Start:</b>
+    {{event.czasPoczatek | plDate }}
+  <b>End:</b>
+    {{event.czasKoniec | plDate }}
+</td>
+<td class="control">
+  <button class="button" (click)="onClick()"  [routerLink]="['/event/list/'+[id]]" >Wgląd</button>
+  <button class="button" [routerLink]="['/event/edit']" >Edytuj</button>
+  <button class="button" (click)="onDelete()" >Usuń</button>
+</td>

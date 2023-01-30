@@ -1,0 +1,19 @@
+<td class="index">
+  {{id+1}}
+  </td>
+  <td class="name">
+      {{wolontariusz.imie | uppercase}}
+  </td>
+  <td class="name">
+      {{wolontariusz.nazwisko | uppercase}}
+  </td>
+  <td class="volu">
+      +48 {{wolontariusz.telefon}}
+  </td>
+  <td class="volu">
+      {{wolontariusz.wiek}}
+  </td>
+
+  <td class="control">
+    <button class="button" [routerLink]="['/wolo/edit']">Edytuj</button>
+  </td>

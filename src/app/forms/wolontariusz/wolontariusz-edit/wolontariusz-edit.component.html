@@ -1,0 +1,65 @@
+<div class="container ">
+    <div class="py-5 text-center">
+      <h2>Wolontariusze</h2>
+      <hr>
+    </div>
+
+    <div class="g-5 d-flex justify-content-center">
+      <div class="col-md-7">
+        <h4 class="mb-3">Edytor wolontariuszy</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="imie" class="form-label">Imię</label>
+              <input type="text" class="form-control" id="imie" placeholder="Jan" value="" required>
+              <div class="invalid-feedback">
+                Podano nieprawidłowe imię
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="nazwisko" class="form-label">Nazwisko</label>
+              <input type="text" class="form-control" id="nazwisko" placeholder="Kowalski" value="" required>
+              <div class="invalid-feedback">
+                Podano nieprawidłowe nazwisko
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Ksywka</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+              <div class="invalid-feedback">
+                  Podaj Ksywkę
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="phone" class="form-label">Telefon</label>
+              <input type="tel" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phone" placeholder="" required>
+              <div class="invalid-feedback">
+                Podaj prawidłowy numer telefonu
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="age" class="form-label">Wiek</label>
+              <input type="number" class="form-control" min="14" id="age" placeholder="" required>
+              <div class="invalid-feedback">
+                Wymagane podanie wieku powyżej 14 lat
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+          <div class="row">
+            <button class="btn col btn-danger btn-lg" [routerLink]="['/wolo']" type="submit">Usuń</button>
+            <div class="col-5"></div>
+            <button class="btn col btn-primary btn-lg" [routerLink]="['/wolo']" type="submit">Zapisz</button>
+            <button class="btn col btn-secondary btn-lg" [routerLink]="['/wolo']" type="submit">Cofnij</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
